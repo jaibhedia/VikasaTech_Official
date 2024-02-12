@@ -1,0 +1,105 @@
+@import '../../colors.scss';
+
+.eventsDiv {
+    
+    .eventsSection1Container {
+        background-color: $darkBlue;
+        overflow: hidden;
+        box-sizing: border-box;
+
+        .eventsSection1 {
+            // height: 50vh;
+            height: 500px;
+            max-height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            max-width: 1200px;
+            margin: auto;
+            padding: 100px;
+            @media only screen and (max-width: 600px) {
+                padding: 50px;
+            }
+
+            h1 {
+                color: $green;
+                font-size: 5em;
+                font-weight: 500;
+
+                @media only screen and (min-width: 1300px) {
+                    font-size: 6em;
+                }
+                @media only screen and (max-width: 600px) {
+                    font-size: 4em;
+                    margin-bottom: 150px;
+                }
+            }
+
+            .il1 {
+                position: absolute;
+                height: 1000px;
+                left: 50%;
+
+                @media only screen and (max-width: 1800px) {
+                    // top: 0px;
+                    left: 500px;
+                    // width: 200%;
+                }
+                @media only screen and (max-width: 1400px) {
+                    // top: 0px;
+                    left: 450px;
+                    // width: 200%;
+                }
+                @media only screen and (max-width: 600px) {
+                    top: 70px;
+                    left: 50px;
+                    // width: 200%;
+                    height: 700px
+                }
+            }
+        }
+    }
+    .eventsSection2 {
+        min-height: 60vh;
+        background-color: $lightBlue;
+        padding: 100px;
+        padding-top: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        @media only screen and (max-width: 600px) {
+            padding: 50px;
+        }
+
+        .eventsSection2Container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            padding-top: 100px;
+            padding-bottom: 30px;
+            margin: 0;
+
+            @media only screen and (max-width: 600px) {
+                font-size: 1.8em;
+                padding-top: 0px;
+            }
+        }
+
+        .eventCardsDiv {
+            width: 100%;
+            display: grid;
+            column-gap: 20px;
+            row-gap: 20px;
+            grid-template-columns: repeat( auto-fill, minmax( 300px, 1fr) );
+
+            @media only screen and (max-width: 600px) {
+                grid-template-columns: 1fr;
+              }
+        }
+    }
+}

@@ -1,0 +1,480 @@
+@import '../../colors.scss';
+
+.homeDiv {
+
+    .homeSection1Container {
+        background-color: $darkBlue;
+        overflow: hidden;
+        padding: 0 100px;
+        
+        @media only screen and (max-width: 600px) {
+            padding: 0 50px;
+        }
+    }
+
+    .homeSection1 {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        align-items: flex-start;
+        box-sizing: border-box;
+        color: white;
+        position: relative;
+        max-width: 1200px;
+        margin: auto;
+
+        @media only screen and (max-width: 600px) {
+            padding: 50px 0;
+            padding-bottom: 10%;
+        }
+
+
+        h1 {
+            width: 50%;
+            font-size: 3.4em;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            // white-space: nowrap;
+            // color: $green;
+            font-weight: 600;
+
+            @media only screen and (max-width: 1700px) {
+                font-size: 2.8em;
+            }
+            @media only screen and (max-width: 1300px) {
+                font-size: 2.4em;
+            }
+            @media only screen and (max-width: 1200px) {
+                width: 100%;
+                font-size: 2.2em;
+                z-index: 2;
+                margin-top: 0;
+            }
+        }
+        p {
+            width: 50%;
+            margin: 0;
+            z-index: 2;
+
+            @media only screen and (max-width: 1200px) {
+                width: 100%;
+            }
+            @media only screen and (max-width: 600px) {
+                display: none;
+            }
+        }
+    
+        h3 {
+            text-transform: uppercase;
+            margin-top: 30px;
+            z-index: 2;
+        }
+        
+        .collaborateRow {
+            display: flex;
+            flex-direction: row;
+
+            @media only screen and (max-width: 600px) {
+                flex-direction: column;
+            }
+        }
+
+        .button-light {
+            margin-right: 15px;
+            margin-bottom: 10px;
+            z-index: 2;
+        }
+        .il1 {
+            position: absolute;
+            overflow: hidden;
+            left: 60%;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 130%;
+
+
+
+            @media only screen and (max-height: 700px) {
+                height: 1000px;
+            }
+            @media only screen and (max-width: 1200px) {
+                // right: -10%;
+                top: 40%;
+                transform: rotate(45deg);
+                height: 100%;
+            }
+            @media only screen and (max-width: 600px) {
+                // right: 0%;
+                left: 30%;
+                top: 45%;
+                height: 100%;
+            }
+        }
+    }
+
+    .homeSection2 {
+        height: 100vh;
+        max-height: 750px;
+        background-color: $lightBlue;
+        padding: 0 100px;
+        padding-left: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        @media only screen and (max-width: 1200px) {
+            padding: 100px;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            justify-content: space-between;
+            // justify-content: center;
+            overflow: hidden;
+            min-height: 0;
+        }
+        @media only screen and (max-width: 600px) {
+            padding: 50px;
+            padding-bottom: 0px;
+            height: auto;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+        p {
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .il2 {
+            position: absolute;
+            left: 0%;
+            max-width: 100%;
+            // top: 0;
+            
+            @media only screen and (max-width: 1200px) {
+                position: inherit;
+                transform: rotate(-90deg);
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 0px;
+                padding-bottom: 0;
+            }
+            @media only screen and (min-width: 1400px) {
+                // max-width: 200%;
+                width: 35%;
+                height: auto;
+            }
+        }
+    }
+    .homeSection3 {
+        // height: 100vh;
+        background-color: white;
+        padding: 100px 100px;
+        // width: 100%;
+        // box-sizing: border-box;
+        // max-width: 600px;
+        margin: 0 auto;
+        max-width: 1200px;
+        margin: auto;
+
+        @media only screen and (max-width: 600px) {
+            padding: 50px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .twitterHeaderDiv {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            @media only screen and (max-width: 800px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            div {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .icon {
+                    font-size: 2.5em;
+                    color: #1DA1F2;
+                }
+
+                a {
+                    color: black;
+                    margin-left: 10px;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .tweetsDiv {
+            // margin: 50px auto;
+            // border: 1px solid black;
+            // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            display: grid;
+            column-gap: 20px;
+            row-gap: 20px;
+            grid-template-columns: repeat( auto-fit, minmax( 300px, 1fr) );
+            align-items: start;
+            align-items: stretch;
+            margin-top: 20px;
+
+            @media only screen and (max-width: 600px) {
+                grid-template-columns: 1fr;
+            }
+    
+            .tweetDiv {
+                // height: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                background-color: white;
+                background: #FFFFFF;
+                box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                padding: 30px;
+                color: black;
+                -moz-user-select: none;
+                -khtml-user-select: none;
+                -webkit-user-select: none;
+
+                &:hover {
+                    background-color: #F5F8FA;
+                    cursor: pointer;
+                }
+                .retweetRow {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+
+                    img {
+                        color: #9B9B9B;
+                    }
+
+                    lable {
+                        font-size: small;
+                        // font-weight: 600;
+                        color: #9B9B9B;
+                        margin-left: 5px;
+                    }
+                }
+
+                .handleRow {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    // background-color:blue;
+                    .handle {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        .handleIcon{
+                            height: 30px;
+                            width: 30px;
+                            // background-color: red;
+                            border-radius: 100%;
+                            margin-right: 10px;
+                        }
+                        h4 {
+                            padding: 0;
+                            margin: 0;
+                            margin-right: 5px;
+                        }
+                        p {
+                            margin: 0;
+                            opacity: 0.7;
+                        }
+                    }
+                    p {
+                        // background-color: green;
+                        font-size: small;
+                        white-space: nowrap;
+                    }
+                    & > p {
+                        @media only screen and (max-width: 400px) {
+                            display: none;
+                        }
+                    }
+                }
+                p {
+                    hyphens: auto;
+                    overflow-wrap: break-word;
+                }
+                p.link {
+                    color: $purple;
+                    display: none;
+                }
+                .linkedTweetDiv {
+                    border: 1px solid rgba(196, 196, 196, 0.28);
+                    box-sizing: border-box;
+                    border-radius: 8px;
+                    padding: 10px;
+                    margin-bottom: 20px;
+                    font-size: small;
+                }
+                .emptySpace {
+                    flex: 2;
+                }
+                .twitterIcons {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    .icon {
+                        font-size: 2.5em;
+                        color: red;
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+        
+    }
+    .homeSection4 {
+        background-color: #101014;
+        color: $lightBlue;
+        padding: 100px;
+        padding-bottom: 200px;
+
+        @media only screen and (max-width: 600px) {
+            padding: 50px;
+        }
+
+        .homeSection4Container {
+            max-width: 1200px;
+            margin: auto;
+        }
+    }
+    .homeSection5 {
+        background-color: $lightBlue;
+        padding: 0 100px;
+        // overflow: hidden;
+
+        @media only screen and (max-width: 600px) {
+            padding: 0;
+            padding-bottom: 50px;
+        }
+
+        .projectsListDiv {
+            background-color:white;
+            position: relative;
+            top: -100px;
+            padding: 50px;
+            // transition: all .4s;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            overflow: hidden;
+            max-width: 1200px;
+            margin: auto;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+            @media only screen and (max-width: 600px) {
+                top: 0;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            .content {
+                width: 100%;
+                overflow: hidden;
+                // max-height: 2500px;
+                transition: .5s ;
+                // margin-bottom: 30px;
+            }
+            .content.hide {
+                // display: none;
+                transition: all .5s;
+                max-height: 0;
+                margin-bottom: 0px;
+            }
+
+            .domainBar {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                width: 100%;
+
+                button {
+                    background: none;
+                    color: inherit;
+                    border: none;
+                    padding: 20px 0;
+                    font: inherit;
+                    outline: inherit;
+                    font-weight: 600;
+                    font-size: 1.2em;
+                    cursor: pointer;
+                }
+
+                &:hover{
+                    button{
+                        // color: $green;
+                    }
+                }
+            }
+            hr {
+                opacity: 0.3;
+                // border: 0;
+                // clear:both;
+                display:block;
+                width: 100%;               
+                // background-color:black;
+                // height: 1px;
+            }
+            .button-dark {
+                margin-top: 30px;
+            }
+        }
+
+
+    }
+    .homeSection6 {
+        background-color: white;
+        // min-height: 100vh;
+        padding: 100px;
+        max-width: 1200px;
+        margin: auto;
+
+        @media only screen and (max-width: 600px) {
+            padding: 50px;
+        }
+
+        
+    }
+    .sectionHeader {
+        font-size: 3em;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: $darkBlue;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 2em;
+        }
+
+        &.light {
+            color: $lightBlue;
+        }
+    }
+}
+
+
+
+a {
+    text-decoration: none
+}
